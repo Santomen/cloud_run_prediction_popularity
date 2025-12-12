@@ -10,7 +10,7 @@ import tempfile
 # --- Configuración ---
 # Detalles del bucket y archivos
 BUCKET_NAME = "proyecto-reddit-maestria"
-BLOB_FOLDER = "proyecto-reddit-maestria/modelos/reddit_produccion_v1"
+BLOB_FOLDER = "/modelos/reddit_produccion_v1"
 MODEL_BLOB = f"{BLOB_FOLDER}/model.keras"
 TOKENIZER_BLOB = f"{BLOB_FOLDER}/tokenizer.pickle"
 
@@ -112,4 +112,5 @@ if __name__ == '__main__':
     # Para ejecución local (no necesario en Cloud Run, pero útil para pruebas)
     # Cloud Run usa el comando 'gunicorn' o similar para ejecutar la aplicación, no este bloque.
     port = int(os.environ.get('PORT', 8080))
+
     app.run(host='0.0.0.0', port=port)
