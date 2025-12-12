@@ -1,5 +1,10 @@
+# Mínimo para la aplicación web
 flask
+gunicorn
+
+# Mínimo para el modelo y GCS, con restricciones de versión de tu entrenamiento
 tensorflow
 numpy
 google-cloud-storage
-gunicorn  # Servidor WSGI recomendado para producción en Cloud Run
+protobuf<5.0.0
+urllib3<2.0.0
